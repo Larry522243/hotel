@@ -1,0 +1,26 @@
+.nav {
+  list-style-type: none;
+  background-color: rgba(38, 139, 254, 0.689);
+  float: left;
+  width: 100%;
+  padding: 0 10%;
+  margin-bottom: 0;
+  display: block;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+li a {
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(216, 255, 237);
+}
+
+li:hover {
+  background-color: rgb(165, 208, 252);
+}

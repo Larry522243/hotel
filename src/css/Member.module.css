@@ -1,0 +1,12 @@
+.container {
+  margin: 0 10%;
+  padding: 10px 15px;
+  display: block;
+}
+
+.container input[type="text"] {
+  width: 100%;
+}
+.container input[type="date"] {
+  width: 100%;
+}
