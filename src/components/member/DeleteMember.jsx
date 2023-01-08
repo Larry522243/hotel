@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import { instance } from "../../API/instance";
 import { useNavigate, useParams } from "react-router-dom";
 
-const UpdateMember = () => {
+const DeleteMember = () => {
   const navigate = useNavigate();
   const url = "/member/";
   const param = useParams();
@@ -42,6 +42,7 @@ const UpdateMember = () => {
         console.log(error);
       }
     })();
+    // eslint-disable-next-line
   }, []);
   const DeleteMemberHandler = (e) => {
     e.preventDefault();
@@ -231,4 +232,4 @@ const UpdateMember = () => {
   );
 };
 
-export default UpdateMember;
+export default DeleteMember;

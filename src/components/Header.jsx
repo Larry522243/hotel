@@ -13,6 +13,9 @@ const Header = () => {
         <li>
           <NavLink to="Member">會員</NavLink>
         </li>
+        <li>
+          <NavLink to="Comment">評論</NavLink>
+        </li>
       </ul>
       <Outlet />
     </>

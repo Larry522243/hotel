@@ -42,6 +42,7 @@ const UpdateMember = () => {
         console.log(error);
       }
     })();
+    // eslint-disable-next-line
   }, []);
   const updateMemberHandler = (e) => {
     e.preventDefault();
