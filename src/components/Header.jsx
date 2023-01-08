@@ -16,6 +16,9 @@ const Header = () => {
         <li>
           <NavLink to="Comment">評論</NavLink>
         </li>
+        <li>
+          <NavLink to="Facility">公共設施</NavLink>
+        </li>
       </ul>
       <Outlet />
     </>

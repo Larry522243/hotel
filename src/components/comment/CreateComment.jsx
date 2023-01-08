@@ -3,6 +3,7 @@ import styles from "../../css/Comment.module.css";
 import { instance } from "../../API/instance";
 import Table from "react-bootstrap/Table";
 import Button from "@mui/material/Button";
+import Footer from "../Footer";
 import { useNavigate } from "react-router-dom";
 
 const CreateComment = () => {
@@ -71,95 +72,98 @@ const CreateComment = () => {
     })();
   };
   return (
-    <div className={container}>
-      <br />
-      <br />
-      <h1>新增評論</h1>
-      <form onSubmit={newCommentHandler}>
-        <Table striped bordered size="sm">
-          <tbody>
-            <tr>
-              <td>身分證後四碼</td>
-              <td>
-                <input
-                  type="text"
-                  value={partId}
-                  onChange={(e) => {
-                    setPartId(e.target.value);
-                  }}
-                />
-              </td>
-              <td>生日</td>
-              <td>
-                <input
-                  type="date"
-                  value={birth}
-                  onChange={(e) => {
-                    setBirth(e.target.value);
-                  }}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td colSpan={4}>
-                <Button
-                  variant="contained"
-                  color="success"
-                  onClick={findMember}
-                >
-                  找尋會員
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>會員編號</td>
-              <td colSpan={3}>
-                <input type="text" readOnly value={id} />
-              </td>
-            </tr>
-            <tr>
-              <td>姓名</td>
-              <td colSpan={3}>
-                <input type="text" readOnly value={name} />
-              </td>
-            </tr>
-            <tr>
-              <td>幾顆星</td>
-              <td colSpan={3}>
-                <input
-                  type="text"
-                  placeholder="請輸入0~5"
-                  value={stars}
-                  onChange={(e) => {
-                    setStars(e.target.value);
-                  }}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>內容</td>
-              <td colSpan={3}>
-                <textarea
-                  cols={55}
-                  rows={10}
-                  value={content}
-                  onChange={(e) => {
-                    setContent(e.target.value);
-                  }}
-                />
-              </td>
-            </tr>
-          </tbody>
-        </Table>
-        <Button variant="contained" color="success" type="submit">
-          送出
-        </Button>
-        &nbsp;
-        <Button variant="contained" color="error" href="/Comment/">
-          取消
-        </Button>
-      </form>
-    </div>
+    <>
+      <div className={container}>
+        <br />
+        <br />
+        <h1>新增評論</h1>
+        <form onSubmit={newCommentHandler}>
+          <Table striped bordered size="sm">
+            <tbody>
+              <tr>
+                <td>身分證後四碼</td>
+                <td>
+                  <input
+                    type="text"
+                    value={partId}
+                    onChange={(e) => {
+                      setPartId(e.target.value);
+                    }}
+                  />
+                </td>
+                <td>生日</td>
+                <td>
+                  <input
+                    type="date"
+                    value={birth}
+                    onChange={(e) => {
+                      setBirth(e.target.value);
+                    }}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colSpan={4}>
+                  <Button
+                    variant="contained"
+                    color="success"
+                    onClick={findMember}
+                  >
+                    找尋會員
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td>會員編號</td>
+                <td colSpan={3}>
+                  <input type="text" readOnly value={id} />
+                </td>
+              </tr>
+              <tr>
+                <td>姓名</td>
+                <td colSpan={3}>
+                  <input type="text" readOnly value={name} />
+                </td>
+              </tr>
+              <tr>
+                <td>幾顆星</td>
+                <td colSpan={3}>
+                  <input
+                    type="text"
+                    placeholder="請輸入0~5"
+                    value={stars}
+                    onChange={(e) => {
+                      setStars(e.target.value);
+                    }}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>內容</td>
+                <td colSpan={3}>
+                  <textarea
+                    cols={55}
+                    rows={10}
+                    value={content}
+                    onChange={(e) => {
+                      setContent(e.target.value);
+                    }}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+          <Button variant="contained" color="success" type="submit">
+            送出
+          </Button>
+          &nbsp;
+          <Button variant="contained" color="error" href="/Comment/">
+            取消
+          </Button>
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 };
 

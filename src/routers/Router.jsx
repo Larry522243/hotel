@@ -12,6 +12,10 @@ import Comment from "../pages/Comment";
 import CreateComment from "../components/comment/CreateComment";
 import UpdateComment from "../components/comment/UpdateComment";
 import DeleteComment from "../components/comment/DeleteComment";
+import Facility from "../pages/Facility";
+import CreateFacility from "../components/facility/CreateFacility";
+import UpdateFacility from "../components/facility/UpdateFacility";
+import DeleteFacility from "../components/facility/DeleteFacility";
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Header />}>
@@ -24,6 +28,10 @@ const Router = createBrowserRouter(
       <Route path="CreateComment" element={<CreateComment />} />
       <Route path="UpdateComment/:id" element={<UpdateComment />} />
       <Route path="DeleteComment/:id" element={<DeleteComment />} />
+      <Route path="Facility" element={<Facility />} />
+      <Route path="CreateFacility" element={<CreateFacility />} />
+      <Route path="UpdateFacility/:id" element={<UpdateFacility />} />
+      <Route path="DeleteFacility/:id" element={<DeleteFacility />} />
     </Route>
   )
 );
